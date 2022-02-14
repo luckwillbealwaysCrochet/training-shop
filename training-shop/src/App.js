@@ -6,10 +6,8 @@ import ContactsPage from './Contacts/Contacts';
 import FooterPage from './FooterPage/FooterPage';
 import HeaderPage from './HeaderPage/HeaderPage';
 import IndexPage from './IndexPage/IndexPage';
-import Accessories from './Products/Accessories/Accessories';
-import BeautyPage from './Products/BeautyPage/BeautyPage';
-import ClothesPage from './Products/ClothesPage/ClothesPage';
-import ProductsPage from './Products/ProductsPage/ProductsPage';
+import BijouteriePage from './Products/BijouteriePage/BijouteriePage';
+import MenClothesPage from './Products/MenClothesPage/MenClothesPage';
 import WomenClothesPage from './Products/WomenClothesPage/WomenClothesPage';
 
 function App() {
@@ -18,24 +16,14 @@ function App() {
         <Route path={'/'} element={<Layout/>}>
             <Route index element={<IndexPage/>}/>
         </Route>
-        <Route path={'about'} element={<AboutPage/>}/>
-        <Route path={'clothes'} element={<ClothesPage/>}>
-            <Route index/>
-        </Route>
-        <Route path={'products'} element={<BijouteriePage/>}/>
-        <Route path={'blog'} element={<BlogPage/>}/>
-        <Route path={'contacts'} element={<ContactsPage/>}/>
+        <Route path={'/about'} element={<AboutPage/>}/>
+        <Route path={'/women'} element={<WomenClothesPage/>}/>
+        <Route path={'/men'} element={<MenClothesPage/>}/>
+        <Route path={'/products'} element={<BijouteriePage/>}/>
+        <Route path={'/blog'} element={<BlogPage/>}/>
+        <Route path={'/contact'} element={<ContactsPage/>}/>
     </Routes>
   );
-}
-
-function ClothesLayout() {
-  return (
-    <div>
-      <h1>WomenClothesPage</h1>
-      <Outlet/>
-    </div>
-  )
 }
 
 function Layout() {

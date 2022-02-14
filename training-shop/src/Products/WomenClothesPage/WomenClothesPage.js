@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function WomenClothesPage() {
     return (
-        <Link to={}></Link>
+        <div>WomenClothesPage</div>
     )
 }
 
