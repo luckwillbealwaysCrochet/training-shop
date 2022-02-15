@@ -45,18 +45,6 @@ const MENU = [
     }
 
 ]
-    
-    const menu_items = () => {
-      return (
-         <div className={'menu'} data-test-id={'menu'}>
-           {MENU.map(({id, title, path}) => (
-             <Link key={id} to={`${path}`} className='menu-item' data-test-id={`menu-link-${path}`}>
-               <span>{title}</span>
-             </Link>
-           ))}
-         </div>
-      )
-    }
 
 function HeaderPage() {
 
@@ -66,8 +54,12 @@ function HeaderPage() {
           <div className={'header-nav'}>
               <Link to={'/'} className={'header-nav-logo'} data-test-id={'header-logo-link'}>CleverShop</Link>
           </div>
-          <div>
-            {menu_items}
+          <div className={'menu'} data-test-id={'menu'}>
+              {MENU.map(({id, path, title}) => (
+                <Link key={id} to={`${path}`} className={'menu-item'} data-test-id={`menu-link-${path}`}>
+                    <span>{title}</span>
+                </Link>
+              ))}
           </div>
 
       </div>
