@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Instagram from '../Instagram.svg'
+
 const MENU = [
     {
         id: 1,
